@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Contex
 
-## Getting Started
+Contex is an open-source semantic search engine designed for engineers, developers, and technical professionals. It understands the intent behind your queries, delivering context-aware results to accelerate problem-solving and knowledge discovery. Whether you're debugging cryptic errors, searching for vague code concepts, or navigating fragmented documentation, Contex acts as your "bug-fixer's assistant" and "corporate brain."
 
-First, run the development server:
+## Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Semantic Understanding**: Matches queries to the meaning of source documents, not just keywords.
+- **Context-Aware Results**: Tailors solutions to your specific context (e.g., a `TypeError` in a React `useEffect` hook).
+- **Unified Knowledge Search**: Aggregates insights from GitHub Issues, Stack Overflow, internal docs (Notion, Confluence), and public blogs.
+- **Engineer-Centric**: Built to solve real-world developer pain points, from error resolution to code discovery.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> **Note**: Contex is in early development. Instructions below assume a basic setup for developers interested in contributing or testing.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1.  **Clone the repository:**
 
-## Learn More
+    ```bash
+    git clone https://github.com/PrtHub/contex.git
+    cd contex
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2.  **Install dependencies:**
+    This project uses pnpm as the package manager.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    pnpm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3.  **Set up environment variables:**
+    Create a `.env.local` file in the root directory.
 
-## Deploy on Vercel
+    ```bash
+    cp .env.example .env.local
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    Add required variables (e.g., API keys for external services). See `.env.example` for details.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4.  **Run the development server:**
+    ```bash
+    pnpm dev
+    ```
+
+Open <http://localhost:3000> in your browser to see Contex in action.
+
+## Usage
+
+### Search Queries
+
+Enter queries like `"TypeError in React useEffect async"` or `"calculate user age from DOB"` in the search bar.
+
+Contex will return semantically relevant results from trusted sources.
+
+### Example Scenarios
+
+- **Debugging**: Find solutions to specific error messages with context-aware suggestions.
+- **Code Discovery**: Locate functions or snippets by describing their purpose, not their exact name.
+- **Knowledge Aggregation**: Pull insights from scattered sources into a single interface.
+
+## Contributing
+
+We welcome contributions from the community! To get started:
+
+1.  Fork the repository.
+2.  Create a feature branch:
+    ```bash
+    git checkout -b feature/your-feature
+    ```
+3.  Commit your changes:
+    ```bash
+    git commit -m "Add your feature"
+    ```
+4.  Push to the branch:
+    ```bash
+    git push origin feature/your-feature
+    ```
+5.  Open a Pull Request.
+
+Please read our `Contributing Guidelines` and `Code of Conduct` before submitting.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Contact
+
+For questions, feedback, or collaboration, reach out via GitHub Issues or email at `your-email@example.com`.
+
+---
+
+_Built with ❤️ for engineers, by engineers._

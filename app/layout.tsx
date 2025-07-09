@@ -1,6 +1,7 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Fira_Code, Inter } from "next/font/google";
-import "./globals.css";
+import { TRPCProvider } from "@/trpc/client";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -43,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${firaCode.variable} antialiased`}>
-        {children}
+        <TRPCProvider>{children}</TRPCProvider>
       </body>
     </html>
   );
